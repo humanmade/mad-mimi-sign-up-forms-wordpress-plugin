@@ -6,4 +6,5 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // delete all options and transients that contain mimi
-$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE '%mimi-%'" );
+delete_option( 'madmimi-version' );
+delete_option( 'mad-mimi-settings' );
