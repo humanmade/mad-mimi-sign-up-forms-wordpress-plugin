@@ -235,7 +235,7 @@ class Mad_Mimi_Settings {
 
 			<h2><?php esc_html_e( 'Mad Mimi Settings', 'mimi' ); ?></h2>
 
-			<?php if ( ! get_user_meta( get_current_user_id(), 'madmimi-dismiss', true ) ) : ?>
+			<?php if ( ! Mad_Mimi_Settings_Controls::get_option( 'username' ) ) : ?>
 
 				<div class="mimi-identity updated notice is-dismissible">
 
@@ -260,7 +260,7 @@ class Mad_Mimi_Settings {
 
 				<h3><?php esc_html_e( 'Available Forms', 'mimi' ); ?></h3>
 
-				<table class="wp-list-table widefat fixed posts">
+				<table class="wp-list-table widefat">
 
 					<thead>
 						<tr>
