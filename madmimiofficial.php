@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: Mad Mimi Sign Up Forms
+Plugin Name: Official Mad Mimi Signup Forms
 Plugin URI: https://wordpress.org/plugins/mad-mimi-sign-up-forms/
-Description: The Official Mad Mimi plugin allows your site visitors to subscribe to your email lists
+Description: Add the Mad Mimi webform to your WordPress site! Easy to set up, the Mad Mimi plugin allows your site visitors to subscribe to your email lists.
 Author: Mad Mimi, LLC
 Version: 1.2
 Author URI: http://madmimi.com/
