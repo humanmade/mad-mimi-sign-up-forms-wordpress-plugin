@@ -237,11 +237,15 @@ class Mad_Mimi_Settings {
 
 			<?php if ( ! get_user_meta( get_current_user_id(), 'madmimi-dismiss', true ) ) : ?>
 
-				<div class="mimi-identity">
-					<a class="mimi-dismiss" href="<?php echo esc_url( add_query_arg( 'action', 'dismiss' ) ); ?>"><?php esc_html_e( 'Dismiss', 'mimi' ); ?></a>
+				<div class="mimi-identity updated notice is-dismissible">
+
 					<h3><?php echo esc_html_x( 'Enjoy the Mad Mimi Experience, first hand.', 'madmimi header note', 'mimi' ); ?></h3>
+
 					<p><?php echo esc_html_x( 'Add your Mad Mimi webform to your WordPress site! Easy to set up, the Mad Mimi plugin allows your site visitors to subscribe to your email list.', 'header note', 'mimi' ); ?></p>
-					<p class="mimi-muted"><?php esc_html( sprintf( _x( 'Don\'t have a Mad Mimi account? Get one in less than 2 minutes! &nbsp; %s', 'header note', 'mimi' ), sprintf( '<a target="_blank" href="http://madmimi.com" class="mimi-button">%s</a>', _x( 'Sign Up Now', 'header note', 'mimi' ) ) ) ); ?></p>
+					<p class="description"><?php echo sprintf( esc_html_x( 'Don\'t have a Mad Mimi account? Get one in less than 2 minutes! &nbsp; %s', 'header note', 'mimi' ), sprintf( '<a target="_blank" href="http://madmimi.com" class="button">%s</a>', esc_html_x( 'Sign Up Now', 'header note', 'mimi' ) ) ); ?></p>
+
+					<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
+
 				</div>
 
 			<?php endif; ?>
