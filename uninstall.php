@@ -5,6 +5,8 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	die;
 }
 
+global $wpdb;
+
 // delete all options and transients that contain mimi
 delete_option( 'madmimi-version' );
 delete_option( 'mad-mimi-settings' );
