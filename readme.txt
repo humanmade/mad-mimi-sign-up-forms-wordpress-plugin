@@ -1,9 +1,9 @@
-=== Official Mad Mimi Sign Up Forms ===
+=== Mad Mimi Signup Forms ===
 Contributors: madmimi, humanmade, illuminea, maor, beccawitz
 Tags: forms, newsletter, opt-in
 Requires at least: 3.5
 Tested up to: 4.3
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,11 +67,10 @@ The API key is in your Mad Mimi account area. For more details see: http://help.
 == Changelog ==
 
 = 1.3 =
-
 * Coding standards
 * Fixed up some improper escaping and sanitization
 * Updated Admin UI to more closely match default WordPress style
-*
+* Minor improvements to plugin copy
 
 = 1.2 =
 * Fixed the padding for p tags in the mad mimi signup form

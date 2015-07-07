@@ -192,6 +192,7 @@ class Mad_Mimi_Settings {
 				'id' => 'username',
 				'page' => $this->slug,
 				'description' => __( 'Your Mad Mimi username (email address)', 'mimi' ),
+				'label_for' => $this->slug . '-username',
 			)
 		);
 
@@ -205,6 +206,7 @@ class Mad_Mimi_Settings {
 				'id' => 'api-key',
 				'page' => $this->slug,
 				'description' => sprintf( '<a target="_blank" href="%s">%s</a>', 'http://help.madmimi.com/where-can-i-find-my-api-key/', _x( 'Where can I find my API key?', 'settings page', 'mimi' )  ),
+				'label_for' => $this->slug . '-api-key',
 			)
 		);
 
@@ -237,14 +239,12 @@ class Mad_Mimi_Settings {
 
 			<?php if ( ! Mad_Mimi_Settings_Controls::get_option( 'username' ) ) : ?>
 
-				<div class="mimi-identity updated notice is-dismissible">
+				<div class="mimi-identity updated notice">
 
 					<h3><?php echo esc_html_x( 'Enjoy the Mad Mimi Experience, first hand.', 'madmimi header note', 'mimi' ); ?></h3>
 
 					<p><?php echo esc_html_x( 'Add your Mad Mimi webform to your WordPress site! Easy to set up, the Mad Mimi plugin allows your site visitors to subscribe to your email list.', 'header note', 'mimi' ); ?></p>
-					<p class="description"><?php echo sprintf( esc_html_x( 'Don\'t have a Mad Mimi account? Get one in less than 2 minutes! &nbsp; %s', 'header note', 'mimi' ), sprintf( '<a target="_blank" href="http://madmimi.com" class="button">%s</a>', esc_html_x( 'Sign Up Now', 'header note', 'mimi' ) ) ); ?></p>
-
-					<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
+					<p class="description"><?php echo sprintf( esc_html_x( 'Don\'t have a Mad Mimi account? Get one in less than 2 minutes! %s', 'header note', 'mimi' ), sprintf( '<a target="_blank" href="http://madmimi.com" class="button">%s</a>', esc_html_x( 'Sign Up Now', 'header note', 'mimi' ) ) ); ?></p>
 
 				</div>
 
@@ -415,7 +415,9 @@ final class Mad_Mimi_Settings_Controls {
 			return;
 		} ?>
 
-		<input type="text" name="<?php echo esc_attr( sprintf( '%s[%s]', $args['page'], $args['id'] ) ); ?>" value="<?php echo esc_attr( self::get_option( $args['id'] ) ); ?>" class="regular-text code" />
+		<input type="text" name="<?php echo esc_attr( sprintf( '%s[%s]', $args['page'], $args['id'] ) ); ?>"
+			id="<?php echo esc_attr( sprintf( '%s-%s', $args['page'], $args['id'] ) ) ?>"
+			value="<?php echo esc_attr( self::get_option( $args['id'] ) ); ?>" class="regular-text code" />
 
 		<?php self::show_description( $args );
 
